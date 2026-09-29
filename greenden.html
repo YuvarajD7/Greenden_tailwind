@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Greenden — Bring Nature Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            greenbrand: {
+              50: '#f2f8f3',
+              100: '#dcefe0',
+              200: '#b9dfc0',
+              500: '#2f7d32',
+              600: '#276b2b',
+              700: '#1f5724',
+              900: '#123917'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .hero-overlay {
+      background: linear-gradient(90deg, rgba(0,0,0,.68) 0%, rgba(0,0,0,.35) 48%, rgba(0,0,0,.08) 100%);
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-800">
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-100">
+    <nav class="max-w-7xl mx-auto px-5 sm:px-8 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2">
+        <div class="w-9 h-9 rounded-full bg-greenbrand-600 text-white flex items-center justify-center">
+          <span class="text-xl">🌿</span>
+        </div>
+        <span class="text-2xl font-bold tracking-tight text-greenbrand-700">Greenden</span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="#home" class="text-greenbrand-700">Home</a>
+        <a href="#products" class="hover:text-greenbrand-600 transition">Products</a>
+        <a href="#about" class="hover:text-greenbrand-600 transition">About Us</a>
+        <a href="#contact" class="hover:text-greenbrand-600 transition">Contact</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <button class="hidden sm:block p-2 hover:bg-greenbrand-50 rounded-full" aria-label="Search">⌕</button>
+        <button class="p-2 hover:bg-greenbrand-50 rounded-full" aria-label="Shopping bag">🛍️</button>
+        <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-greenbrand-50" aria-label="Open menu">☰</button>
+      </div>
+    </nav>
+
+    <div id="mobileMenu" class="hidden md:hidden border-t bg-white px-6 py-4">
+      <div class="flex flex-col gap-4 text-sm font-medium">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="home">
+    <section class="relative min-h-[610px] flex items-center overflow-hidden">
+      <img
+        src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1800&q=85"
+        alt="Green indoor plants"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 hero-overlay"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto w-full px-6 sm:px-10 py-24">
+        <div class="max-w-2xl text-white">
+          <p class="uppercase tracking-[0.3em] text-sm font-semibold text-green-200 mb-5">
+            Grow your happiness
+          </p>
+          <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.02]">
+            Bring the beauty of nature home.
+          </h1>
+          <p class="mt-6 text-lg text-gray-100 max-w-xl leading-8">
+            Discover beautiful indoor and outdoor plants, thoughtfully selected
+            to make every space feel fresh, peaceful and alive.
+          </p>
+          <div class="mt-9 flex flex-wrap gap-4">
+            <a href="#products"
+              class="inline-flex items-center justify-center rounded-full bg-greenbrand-500 hover:bg-greenbrand-600 px-7 py-3.5 font-semibold transition shadow-lg">
+              Shop Plants →
+            </a>
+            <a href="#about"
+              class="inline-flex items-center justify-center rounded-full border border-white/70 hover:bg-white hover:text-gray-900 px-7 py-3.5 font-semibold transition">
+              Explore Greenden
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust strip -->
+    <section class="bg-greenbrand-700 text-white">
+      <div class="max-w-7xl mx-auto px-6 py-5 grid grid-cols-2 md:grid-cols-4 gap-5 text-center text-sm">
+        <div><span class="font-bold">Free delivery</span><br><span class="text-green-100">On orders over ₹999</span></div>
+        <div><span class="font-bold">Healthy plants</span><br><span class="text-green-100">Quality guaranteed</span></div>
+        <div><span class="font-bold">Easy returns</span><br><span class="text-green-100">7-day plant guarantee</span></div>
+        <div><span class="font-bold">Expert support</span><br><span class="text-green-100">Plant care guidance</span></div>
+      </div>
+    </section>
+
+    <!-- Featured -->
+    <section id="products" class="max-w-7xl mx-auto px-6 sm:px-8 py-20">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-10">
+        <div>
+          <p class="text-greenbrand-600 font-semibold text-sm uppercase tracking-widest">Our collection</p>
+          <h2 class="text-4xl font-bold text-gray-900 mt-2">Featured plants</h2>
+          <p class="mt-3 text-gray-500 max-w-xl">A handpicked collection of green companions for your home, desk and garden.</p>
+        </div>
+        <a href="#" class="text-greenbrand-700 font-semibold hover:underline">View all plants →</a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
+        <article class="group">
+          <div class="relative overflow-hidden rounded-2xl bg-greenbrand-50 aspect-[4/5]">
+            <img src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=800&q=85"
+              alt="Monstera plant" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-4 left-4 bg-white px-3 py-1 rounded-full text-xs font-bold text-greenbrand-700">Bestseller</span>
+          </div>
+          <div class="pt-4">
+            <h3 class="font-bold text-lg">Monstera Deliciosa</h3>
+            <p class="text-gray-500 text-sm mt-1">Indoor Plant</p>
+            <p class="font-bold mt-3 text-greenbrand-700">₹799</p>
+          </div>
+        </article>
+
+        <article class="group">
+          <div class="relative overflow-hidden rounded-2xl bg-greenbrand-50 aspect-[4/5]">
+            <img src="https://images.pexels.com/photos/8061943/pexels-photo-8061943.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Snake plant" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-4 left-4 bg-white px-3 py-1 rounded-full text-xs font-bold text-greenbrand-700">Popular</span>
+          </div>
+          <div class="pt-4">
+            <h3 class="font-bold text-lg">Snake Plant</h3>
+            <p class="text-gray-500 text-sm mt-1">Low Maintenance</p>
+            <p class="font-bold mt-3 text-greenbrand-700">₹599</p>
+          </div>
+        </article>
+
+        <article class="group">
+          <div class="relative overflow-hidden rounded-2xl bg-greenbrand-50 aspect-[4/5]">
+            <img src="https://images.unsplash.com/photo-1604762524889-3e2fcc145683?auto=format&fit=crop&w=800&q=85"
+              alt="Peace lily plant" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          </div>
+          <div class="pt-4">
+            <h3 class="font-bold text-lg">Peace Lily</h3>
+            <p class="text-gray-500 text-sm mt-1">Air Purifying</p>
+            <p class="font-bold mt-3 text-greenbrand-700">₹699</p>
+          </div>
+        </article>
+
+        <article class="group">
+          <div class="relative overflow-hidden rounded-2xl bg-greenbrand-50 aspect-[4/5]">
+            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=85"
+              alt="Flowering plant" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-4 left-4 bg-greenbrand-600 text-white px-3 py-1 rounded-full text-xs font-bold">New</span>
+          </div>
+          <div class="pt-4">
+            <h3 class="font-bold text-lg">Blooming Anthurium</h3>
+            <p class="text-gray-500 text-sm mt-1">Flowering Plant</p>
+            <p class="font-bold mt-3 text-greenbrand-700">₹899</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Why Greenden -->
+    <section id="about" class="bg-greenbrand-50">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8 py-20">
+        <div class="text-center max-w-2xl mx-auto">
+          <p class="text-greenbrand-600 font-semibold text-sm uppercase tracking-widest">Why Greenden</p>
+          <h2 class="text-4xl font-bold text-gray-900 mt-2">More than just plants.</h2>
+          <p class="mt-4 text-gray-600">We make it easy to bring a little more green into your everyday life.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-7 mt-12">
+          <div class="bg-white rounded-2xl p-8 shadow-sm border border-green-100">
+            <div class="text-3xl mb-5">🌱</div>
+            <h3 class="text-xl font-bold">Healthy & fresh</h3>
+            <p class="text-gray-500 mt-3 leading-7">Every plant is carefully selected and packed so it arrives fresh and ready to grow.</p>
+          </div>
+          <div class="bg-white rounded-2xl p-8 shadow-sm border border-green-100">
+            <div class="text-3xl mb-5">🚚</div>
+            <h3 class="text-xl font-bold">Safe delivery</h3>
+            <p class="text-gray-500 mt-3 leading-7">Our thoughtful packaging helps protect your plants from nursery to doorstep.</p>
+          </div>
+          <div class="bg-white rounded-2xl p-8 shadow-sm border border-green-100">
+            <div class="text-3xl mb-5">💚</div>
+            <h3 class="text-xl font-bold">Plant care support</h3>
+            <p class="text-gray-500 mt-3 leading-7">Get simple care tips that help beginners confidently grow beautiful plants.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="max-w-7xl mx-auto px-6 sm:px-8 py-20">
+      <div class="rounded-3xl bg-greenbrand-700 overflow-hidden relative">
+        <div class="absolute right-0 top-0 w-1/2 h-full opacity-20"
+          style="background: radial-gradient(circle at center, #b9dfc0, transparent 65%);"></div>
+        <div class="relative px-8 sm:px-14 py-14 max-w-3xl text-white">
+          <p class="uppercase tracking-widest text-sm text-green-200 font-semibold">Start growing</p>
+          <h2 class="text-4xl sm:text-5xl font-bold mt-3">Find your next favourite plant.</h2>
+          <p class="text-green-100 mt-4 max-w-xl leading-7">Create a calmer, greener space with plants that fit your lifestyle.</p>
+          <a href="#products" class="inline-block mt-7 bg-white text-greenbrand-700 px-7 py-3.5 rounded-full font-bold hover:bg-green-50 transition">Shop collection</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-gray-950 text-white">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 py-14 grid md:grid-cols-4 gap-10">
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-2">
+          <div class="w-9 h-9 rounded-full bg-greenbrand-500 flex items-center justify-center">🌿</div>
+          <span class="text-2xl font-bold">Greenden</span>
+        </div>
+        <p class="text-gray-400 mt-5 max-w-md leading-7">
+          Beautiful plants for beautiful spaces. Grow something good with Greenden.
+        </p>
+      </div>
+      <div>
+        <h3 class="font-bold mb-4">Quick links</h3>
+        <div class="space-y-3 text-gray-400 text-sm">
+          <a href="#home" class="block hover:text-white">Home</a>
+          <a href="#products" class="block hover:text-white">Products</a>
+          <a href="#about" class="block hover:text-white">About Us</a>
+        </div>
+      </div>
+      <div>
+        <h3 class="font-bold mb-4">Contact</h3>
+        <div class="space-y-3 text-gray-400 text-sm">
+          <p>hello@greenden.com</p>
+          <p>+91 98765 43210</p>
+          <p>Chennai, Tamil Nadu</p>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8 py-5 text-sm text-gray-500 flex flex-col sm:flex-row justify-between gap-2">
+        <p>© 2026 Greenden. All rights reserved.</p>
+        <p>Made with 🌱 and Tailwind CSS</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="greenden.js"></script>
+</body>
+</html>
